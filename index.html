@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern Tech Services & Architecture Portfolio. High-performance software engineering, cloud solutions, and UI design.">
+  <title>David Tech Solutions | Engineering & Architecture Portfolio</title>
+  
+  <!-- External Modular Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        David <span>Tech Solutions</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark and light theme" aria-pressed="false" title="Switch to dark mode">
+              <!-- Moon Icon for switching to dark mode -->
+              <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <!-- Sun Icon for switching to light mode -->
+              <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <span class="hero-tag">Custom Software Solutions & IT Consultant</span>
+        <h1 class="hero-title">
+          Transforming Ideas into Modern, <span class="hero-gradient-text">Reliable Digital Products</span>
+        </h1>
+        <p class="hero-description">
+          We architect and deliver scalable web applications, robust cloud infrastructure, and intuitive digital interfaces engineered for scale, resilience, and speed.
+        </p>
+        <a href="#services" class="btn btn-primary">
+          Explore Services & Solutions
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Counter Bar -->
+    <section class="stats-bar" aria-label="Key Performance Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">99.9%</span>
+            <span class="stat-label">Uptime Architecture</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50+</span>
+            <span class="stat-label">Cloud Deployments</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">24/7</span>
+            <span class="stat-label">Architecture Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Projects Grid Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Services & Projects</h2>
+          <p class="section-subtitle">Explore featured technical services and recent engineering deliverables.</p>
+        </header>
+
+        <!-- Category Filters -->
+        <div class="filter-container" role="toolbar" aria-label="Filter Services and Projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="development">Web & SaaS</button>
+          <button class="filter-btn" data-filter="ai-automation">AI & Automation</button>
+          <button class="filter-btn" data-filter="ui-architecture">UI/UX & Architecture</button>
+        </div>
+
+        <!-- 3 Filterable Cards Grid -->
+        <div class="cards-grid">
+          <!-- Card 1: Custom Web & SaaS Development -->
+          <article class="card" data-category="development">
+            <div class="card-top">
+              <div class="card-media">
+                <img src="assets/img/web-saas-mockup.svg" alt="Enterprise SaaS platform interface and analytics chart mockup" class="card-img" loading="lazy">
+              </div>
+              <span class="card-category">Web & SaaS</span>
+              <h3 class="card-title">Custom Web & SaaS Development</h3>
+              <p class="card-description">
+                Tailored full-stack web applications, business portals, and secure APIs built for scalability, high availability, and seamless user experiences.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">React / Next.js</span>
+                <span class="card-tag">Node.js</span>
+                <span class="card-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <a href="#contact" class="card-link">
+              Explore Solution 
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Card 2: AI & Automation Integration -->
+          <article class="card" data-category="ai-automation">
+            <div class="card-top">
+              <div class="card-media">
+                <img src="assets/img/ai-automation-mockup.svg" alt="Autonomous AI pipeline neural architecture diagram" class="card-img" loading="lazy">
+              </div>
+              <span class="card-category">AI & Automation</span>
+              <h3 class="card-title">AI & Automation Integration</h3>
+              <p class="card-description">
+                Intelligent business process automation, LLM-powered assistants, and smart data pipelines that eliminate repetitive manual tasks.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">AI Workflows</span>
+                <span class="card-tag">Python</span>
+                <span class="card-tag">APIs</span>
+              </div>
+            </div>
+            <a href="#contact" class="card-link">
+              Explore Solution 
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <!-- Card 3: UI/UX Design & Architecture Audit -->
+          <article class="card" data-category="ui-architecture">
+            <div class="card-top">
+              <div class="card-media">
+                <img src="assets/img/architecture-ui-mockup.svg" alt="Design system tokens, color palette, and wireframe blueprint" class="card-img" loading="lazy">
+              </div>
+              <span class="card-category">UI/UX & Architecture</span>
+              <h3 class="card-title">UI/UX Design & Architecture Audit</h3>
+              <p class="card-description">
+                Comprehensive architecture reviews, accessible design systems, and frontend performance tuning to deliver sub-second paint times.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Design Systems</span>
+                <span class="card-tag">Performance</span>
+                <span class="card-tag">A11y</span>
+              </div>
+            </div>
+            <a href="#contact" class="card-link">
+              Explore Solution 
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Packages Section -->
+    <section id="packages" class="packages-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Service Packages</h2>
+          <p class="section-subtitle">Transparent, flexible engagement models tailored to support you at any stage of growth.</p>
+        </header>
+
+        <div class="packages-grid">
+          <!-- Tier 1: Starter -->
+          <article class="package-card">
+            <h3 class="package-name">Starter</h3>
+            <p class="package-desc">Ideal for early-stage ventures, MVP launches, or single-feature web deployments.</p>
+            <ul class="package-features">
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Responsive Modern Landing or Web App
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Core SEO & Mobile Optimization
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Validated Lead Generation Form
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                14-Day Post-Launch Support
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary package-btn" data-package="Starter">Get Started</a>
+          </article>
+
+          <!-- Tier 2: Pro (Featured/Popular) -->
+          <article class="package-card popular">
+            <span class="popular-badge">Most Popular</span>
+            <h3 class="package-name">Professional</h3>
+            <p class="package-desc">For growing businesses needing custom SaaS apps, API architectures, or AI automations.</p>
+            <ul class="package-features">
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full-Stack Web & SaaS Application
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom AI & Workflow Automations
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Database Design & API Integrations
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Performance & Security Hardening
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                30-Day Dedicated Support
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary package-btn" data-package="Professional">Get Started</a>
+          </article>
+
+          <!-- Tier 3: Enterprise -->
+          <article class="package-card">
+            <h3 class="package-name">Enterprise</h3>
+            <p class="package-desc">Comprehensive system architecture, custom enterprise software, and ongoing technical advisory.</p>
+            <ul class="package-features">
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                High-Availability Cloud Architecture
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom Design System & Component Library
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                CI/CD Pipelines & Infrastructure as Code
+              </li>
+              <li class="package-feature-item">
+                <svg class="feature-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                24/7 Priority SLA & Dedicated Architect
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary package-btn" data-package="Enterprise">Get Started</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <header class="section-header" style="margin-bottom: 2rem;">
+            <h2 class="section-title">Start Your Next Project with David Tech Solutions</h2>
+            <p class="section-subtitle">Ready to modernize your systems or automate workflows? Get in touch for a free project consultation.</p>
+          </header>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div id="form-status" class="form-status" role="alert"></div>
+
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Morgan" autocomplete="name">
+              <span id="name-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@example.com" autocomplete="email">
+              <span id="email-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Project Details</label>
+              <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your technical requirements, goals, and timeline..."></textarea>
+              <span id="message-error" class="form-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+              Send Message
+            </button>
+
+            <!-- WhatsApp Quick Connect Button -->
+            <div class="whatsapp-divider">or connect instantly</div>
+            <a href="https://wa.me/233209734343?text=Hi%20David%20Tech%20Solutions,%20I%20am%20interested%20in%20discussing%20a%20project." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-whatsapp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
+              </svg>
+              Chat with Us on WhatsApp
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 David Tech Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top of page" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External Modular JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

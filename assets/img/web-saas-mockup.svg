@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="480" fill="url(#bg1)"/>
+  <circle cx="680" cy="90" r="140" fill="url(#primary-grad)" opacity="0.15" filter="url(#glow1)"/>
+  <circle cx="120" cy="400" r="160" fill="url(#accent-cyan)" opacity="0.12" filter="url(#glow1)"/>
+
+  <!-- Grid Blueprint Overlay -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="80" y1="0" x2="80" y2="480"/>
+    <line x1="160" y1="0" x2="160" y2="480"/>
+    <line x1="240" y1="0" x2="240" y2="480"/>
+    <line x1="320" y1="0" x2="320" y2="480"/>
+    <line x1="400" y1="0" x2="400" y2="480"/>
+    <line x1="480" y1="0" x2="480" y2="480"/>
+    <line x1="560" y1="0" x2="560" y2="480"/>
+    <line x1="640" y1="0" x2="640" y2="480"/>
+    <line x1="720" y1="0" x2="720" y2="480"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="160" x2="800" y2="160"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+  </g>
+
+  <!-- SaaS Dashboard Window Container -->
+  <g transform="translate(100, 60)">
+    <!-- Window Shadow & Frame -->
+    <rect x="0" y="0" width="600" height="360" rx="14" fill="#131b2e" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    
+    <!-- Window Title Bar -->
+    <rect x="0" y="0" width="600" height="42" rx="14" fill="#1a243d"/>
+    <rect x="0" y="28" width="600" height="14" fill="#1a243d"/>
+    <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+    <circle cx="42" cy="21" r="5" fill="#f59e0b"/>
+    <circle cx="60" cy="21" r="5" fill="#10b981"/>
+    
+    <!-- Browser URL pill -->
+    <rect x="150" y="11" width="300" height="20" rx="6" fill="#0f172a" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <circle cx="166" cy="21" r="3.5" fill="#38bdf8"/>
+    <rect x="180" y="18" width="90" height="6" rx="3" fill="#64748b"/>
+
+    <!-- Left Sidebar -->
+    <rect x="16" y="58" width="110" height="286" rx="8" fill="#0f172a"/>
+    <rect x="28" y="76" width="60" height="8" rx="4" fill="#3b82f6"/>
+    <rect x="28" y="104" width="80" height="7" rx="3" fill="#475569"/>
+    <rect x="28" y="126" width="70" height="7" rx="3" fill="#475569"/>
+    <rect x="28" y="148" width="75" height="7" rx="3" fill="#475569"/>
+    <rect x="28" y="170" width="65" height="7" rx="3" fill="#475569"/>
+
+    <!-- Main Content Area: Metric Cards -->
+    <rect x="142" y="58" width="138" height="68" rx="8" fill="#1a243d" stroke="rgba(37,99,235,0.3)"/>
+    <rect x="156" y="72" width="55" height="6" rx="3" fill="#94a3b8"/>
+    <rect x="156" y="86" width="80" height="14" rx="4" fill="#38bdf8"/>
+
+    <rect x="294" y="58" width="138" height="68" rx="8" fill="#1a243d" stroke="rgba(6,182,212,0.3)"/>
+    <rect x="308" y="72" width="65" height="6" rx="3" fill="#94a3b8"/>
+    <rect x="308" y="86" width="70" height="14" rx="4" fill="#22d3ee"/>
+
+    <rect x="446" y="58" width="138" height="68" rx="8" fill="#1a243d" stroke="rgba(168,85,247,0.3)"/>
+    <rect x="460" y="72" width="60" height="6" rx="3" fill="#94a3b8"/>
+    <rect x="460" y="86" width="85" height="14" rx="4" fill="#a855f7"/>
+
+    <!-- Chart Panel -->
+    <rect x="142" y="142" width="442" height="202" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="162" y="160" width="100" height="8" rx="4" fill="#94a3b8"/>
+
+    <!-- Dynamic SVG Chart Waves -->
+    <path d="M 162 280 Q 230 200, 290 240 T 420 190 T 540 220" fill="none" stroke="url(#primary-grad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 162 280 Q 230 200, 290 240 T 420 190 T 540 220 L 540 310 L 162 310 Z" fill="url(#primary-grad)" opacity="0.12"/>
+
+    <path d="M 162 300 Q 220 260, 310 270 T 450 220 T 540 250" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="4 4"/>
+    
+    <!-- Glowing Nodes on Chart -->
+    <circle cx="290" cy="240" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="420" cy="190" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+  </g>
+</svg>

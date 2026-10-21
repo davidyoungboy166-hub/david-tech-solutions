@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#080b12"/>
+    </linearGradient>
+    <linearGradient id="ai-glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="cyber-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="ai-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#bg2)"/>
+  <circle cx="400" cy="240" r="170" fill="url(#ai-glow-grad)" opacity="0.18" filter="url(#ai-glow)"/>
+
+  <!-- Neural Net Data Grid -->
+  <g stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.2">
+    <circle cx="400" cy="240" r="80" fill="none" stroke-dasharray="6 4"/>
+    <circle cx="400" cy="240" r="150" fill="none" stroke-dasharray="8 6"/>
+    <circle cx="400" cy="240" r="220" fill="none" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- Neural Network Connections -->
+  <g stroke="url(#ai-glow-grad)" stroke-width="2" opacity="0.65">
+    <!-- Center to Layers -->
+    <line x1="400" y1="240" x2="260" y2="140"/>
+    <line x1="400" y1="240" x2="240" y2="320"/>
+    <line x1="400" y1="240" x2="540" y2="150"/>
+    <line x1="400" y1="240" x2="560" y2="330"/>
+    <line x1="260" y1="140" x2="150" y2="210"/>
+    <line x1="240" y1="320" x2="150" y2="210"/>
+    <line x1="540" y1="150" x2="650" y2="240"/>
+    <line x1="560" y1="330" x2="650" y2="240"/>
+    <!-- Cross links -->
+    <line x1="260" y1="140" x2="400" y2="110"/>
+    <line x1="540" y1="150" x2="400" y2="110"/>
+    <line x1="240" y1="320" x2="400" y2="370"/>
+    <line x1="560" y1="330" x2="400" y2="370"/>
+  </g>
+
+  <!-- Outer Cloud Pipeline Nodes -->
+  <g>
+    <!-- Left Ingestion Node -->
+    <rect x="100" y="180" width="100" height="60" rx="10" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect x="115" y="196" width="70" height="7" rx="3.5" fill="#38bdf8"/>
+    <rect x="115" y="213" width="50" height="6" rx="3" fill="#64748b"/>
+    <circle cx="150" cy="210" r="4" fill="#06b6d4"/>
+
+    <!-- Right Destination Node -->
+    <rect x="600" y="210" width="100" height="60" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="615" y="226" width="70" height="7" rx="3.5" fill="#a78bfa"/>
+    <rect x="615" y="243" width="50" height="6" rx="3" fill="#64748b"/>
+    <circle cx="650" cy="240" r="4" fill="#8b5cf6"/>
+
+    <!-- Top Orchestrator Node -->
+    <circle cx="400" cy="110" r="24" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M 392 110 L 408 110 M 400 102 L 400 118" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Bottom Database Node -->
+    <circle cx="400" cy="370" r="24" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+    <ellipse cx="400" cy="364" rx="12" ry="4" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="400" cy="374" rx="12" ry="4" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+  </g>
+
+  <!-- Intermediate Process Nodes -->
+  <circle cx="260" cy="140" r="14" fill="#0f172a" stroke="#22d3ee" stroke-width="2.5"/>
+  <circle cx="260" cy="140" r="6" fill="#22d3ee"/>
+
+  <circle cx="240" cy="320" r="14" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5"/>
+  <circle cx="240" cy="320" r="6" fill="#06b6d4"/>
+
+  <circle cx="540" cy="150" r="14" fill="#0f172a" stroke="#a855f7" stroke-width="2.5"/>
+  <circle cx="540" cy="150" r="6" fill="#a855f7"/>
+
+  <circle cx="560" cy="330" r="14" fill="#0f172a" stroke="#c084fc" stroke-width="2.5"/>
+  <circle cx="560" cy="330" r="6" fill="#c084fc"/>
+
+  <!-- Core AI Processing Engine (Center Hexagon/Brain) -->
+  <g transform="translate(400, 240)">
+    <circle cx="0" cy="0" r="44" fill="#1e1b4b" stroke="url(#ai-glow-grad)" stroke-width="3"/>
+    <circle cx="0" cy="0" r="30" fill="url(#ai-glow-grad)" opacity="0.4"/>
+    <!-- AI Core Spark Icon -->
+    <path d="M 0 -18 Q 0 0, 18 0 Q 0 0, 0 18 Q 0 0, -18 0 Q 0 0, 0 -18 Z" fill="#ffffff"/>
+  </g>
+</svg>
