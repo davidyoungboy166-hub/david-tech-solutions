@@ -4,6 +4,7 @@
  * 1. ThemeController: Manages Dark/Light theme switching & persistence.
  * 2. FilterController: Handles category filtering on Services & Projects cards.
  * 3. ContactFormController: Handles validation (including strict email checking) and submission.
+ * 4. ScrollController: Handles back-to-top floating button and smooth scrolling.
  */
 
 // Reset scroll restoration so the browser does not jump down on page load
@@ -117,7 +118,7 @@ const FilterController = (() => {
 })();
 
 /* ==========================================================================
-   3. Contact Form Controller
+   3. Contact Form Controller (Formspree Asynchronous Integration)
    ========================================================================== */
 const ContactFormController = (() => {
   const form = document.getElementById('contact-form');
@@ -129,7 +130,7 @@ const ContactFormController = (() => {
 
   const setupPackagePrefill = () => {
     packageButtons.forEach((btn) => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         const packageName = btn.getAttribute('data-package');
         if (messageInput && packageName) {
           messageInput.value = `Hi David Tech Solutions, I would like to get started with the ${packageName} package. Here are my project details:\n`;
@@ -201,33 +202,61 @@ const ContactFormController = (() => {
     const isMessageValid = validateMessage();
 
     if (isNameValid && isEmailValid && isMessageValid) {
-      // Simulate successful asynchronous submission
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      setTimeout(() => {
+      // Submit form data asynchronously to Formspree endpoint
+      const formData = new FormData(form);
+
+      fetch('https://formspree.io/f/mjygnoqz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then((response) => {
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
 
-        // Display success banner
-        if (statusMessage) {
-          statusMessage.textContent = 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
-          statusMessage.className = 'form-status success';
-        }
-
-        // Reset form inputs
-        form.reset();
-
-        // Clear status banner after 6 seconds
-        setTimeout(() => {
+        if (response.ok) {
+          // Display success banner
           if (statusMessage) {
-            statusMessage.style.display = 'none';
-            statusMessage.className = 'form-status';
+            statusMessage.textContent = 'Thank you! Your message has been sent successfully. David Tech Solutions will get back to you shortly.';
+            statusMessage.className = 'form-status success';
+            statusMessage.style.display = 'block';
           }
-        }, 6000);
-      }, 700);
+          // Reset form inputs
+          form.reset();
+
+          // Clear status banner after 7 seconds
+          setTimeout(() => {
+            if (statusMessage) {
+              statusMessage.style.display = 'none';
+              statusMessage.className = 'form-status';
+            }
+          }, 7000);
+        } else {
+          response.json().then((data) => {
+            if (statusMessage) {
+              statusMessage.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your form. Please try again or WhatsApp us directly.';
+              statusMessage.className = 'form-status error';
+              statusMessage.style.display = 'block';
+            }
+          });
+        }
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        if (statusMessage) {
+          statusMessage.textContent = 'Network error. Please check your internet connection or use WhatsApp directly.';
+          statusMessage.className = 'form-status error';
+          statusMessage.style.display = 'block';
+        }
+      });
     }
   };
 
